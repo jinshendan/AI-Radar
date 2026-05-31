@@ -52,6 +52,13 @@ It returns the same typed snapshot used by the dashboard. Real collectors should
 write into the same domain model first, then replace mock data with database
 queries.
 
+Backend Phase 1 contracts for ranking, clustering, summaries, background jobs,
+and future API routes are documented in
+[docs/backend-contracts.md](docs/backend-contracts.md).
+
 ## Multi-Agent Plan
 
 See [docs/multi-agent-plan.md](docs/multi-agent-plan.md).
+
+Phase 1 source registry and relevance rubric:
+[docs/source-registry.md](docs/source-registry.md).

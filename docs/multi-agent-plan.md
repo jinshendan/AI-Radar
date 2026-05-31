@@ -9,7 +9,7 @@ AI Radar uses one Team Leader and five execution lanes.
 | Leader | Scope, task graph, dependencies, integration, reporting | Roadmap, task board, acceptance criteria |
 | IntelScout | Source discovery and monitoring target research | Source registry and scoring rubric |
 | DataEngineer | Collectors, normalization, storage schema, scheduler | Ingestion pipeline and data contracts |
-| BackendEngineer | Ranking, clustering, summaries, API routes | Radar API and scoring service |
+| BackendEngineer | Ranking, clustering, summaries, API routes | Radar API and scoring service; see [backend contracts](backend-contracts.md) |
 | FrontendEngineer | Dashboard UX and responsive implementation | Radar, People & Labs, GitHub Hot views |
 | QAReviewer | Data checks, test coverage, release checklist | QA report and runbook |
 
@@ -28,8 +28,16 @@ AI Radar uses one Team Leader and five execution lanes.
   targets.
 - DataEngineer designs connector contracts for official sites/RSS, GitHub,
   Hacker News, arXiv, Papers with Code, and Hugging Face.
+- BackendEngineer designs ranking, clustering, summary generation, API contracts,
+  and background job boundaries.
 - FrontendEngineer implements dashboard navigation, ranking views, source health,
   and empty/loading/error states.
+
+Data ingestion contracts, storage schema, and collector sequencing are documented
+in [data-ingestion-plan.md](data-ingestion-plan.md). Shared TypeScript contracts
+live in `src/lib/ingestion-contracts.ts`.
+Backend contracts for scoring, clustering, summaries, API routes, and background
+jobs are documented in [backend-contracts.md](backend-contracts.md).
 
 ## Phase 2: Real Data
 
